@@ -11,7 +11,7 @@ public class BigSum {
         
         for (int count = 0; count < size; count++) {
             if (in.hasNextInt()) {
-                result.add(new BigDecimal(in.nextInt()));
+               result = result.add(new BigDecimal(in.nextInt()));
             }
         }
         
