@@ -14,7 +14,7 @@ public class PlusMinus {
 		}
 		
 		Arrays.stream(countFraction(size, numbers))
-			.forEach(fraction -> System.out.printf("%d", fraction));
+			.forEach(fraction -> System.out.printf("%.6f\n", fraction));
 	}
 	
 	public static double[] countFraction(int size, int[] numbers) {
