@@ -2,6 +2,7 @@ package pl.myjava.algorithms.implementation;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.function.Function;
@@ -12,7 +13,11 @@ public class MigratoryBirds {
         int result = 0;
         Map<Integer, Integer> count = new HashMap();
         
-        Arrays.stream(ar).collect(Collectors.groupingBy(Function.identity()), accumulator, combiner)
+        Arrays.stream(ar).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+        	      .entrySet()
+        	      .stream()
+        	      .max(Comparator.comparing(Entry::getValue))
+        	      .ifPresent(System.out::println);
         
         return result;
     }
