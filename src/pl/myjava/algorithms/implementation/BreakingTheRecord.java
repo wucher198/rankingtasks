@@ -8,13 +8,23 @@ import java.util.Scanner;
  */
 public class BreakingTheRecord {
     static int[] getRecord(int[] s){
-        final int[] records = new int[2];
+    	final int[] result = new int[2];
+        final int[] maxMin = new int[2];
+        
+        maxMin[0] = s[0];
+        maxMin[1] = s[0];
 
-        Arrays.stream(s).forEach(score -> {
-
+        Arrays.stream(s).skip(1).forEach(score -> {
+        	if (score > maxMin[0]) {
+        		maxMin[0] = score;
+        		result[0]++;
+        	} else if (score < maxMin[1]) {
+        		maxMin[1] = score;
+        		result[1]++;
+        	}
         });
 
-        return records;
+        return result;
     }
 
     public static void main(String[] args) {
