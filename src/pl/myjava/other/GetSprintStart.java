@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 
 /**
  * Algorytm do wyliczania nazwy sprintu.
- * Sprint zaczyna siê w srode i trwa 2 tygodnie.
+ * Sprint zaczyna sie w srode i trwa 2 tygodnie.
  * Dane wejsciowe albo poczatek pierwszego sprintu albo
  * to ze zaczynaja sie w parzysty tydzien + 
  * data dla ktorej trzeba wyliczyc nazwe sprintu
